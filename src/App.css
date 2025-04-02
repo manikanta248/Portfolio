@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+body {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar Container */
+.navbar-container {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar Content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Brand Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu Button */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menu Icon */
+.menu-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Navigation List */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  background-color:#2d2c2c;
+  padding: 1rem;
+}
+
+.mobile-nav .nav-list {
+  background-color: #2d2c2c;
+  flex-direction: column;
+}
+
+.mobile-nav .nav-item {
+  background-color: rgb(23, 23, 27);
+  margin: 1rem 0;
+}
+
+.mobile-nav .nav-item:hover {
+  background-color: #2d2c2c;
+  color: rgb(136, 133, 133);
+}
+
+/* Hero Section */
+.hero {
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hero Details */
+.hero-details {
+  z-index: 2;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 1rem;
+}
+/* Hero Title */
+.hero-title {
+  text-align: center;
+  
+  font-size: x-large;
+  background: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-details {
+    margin-top: 100px;
+  }
+
+  .hero-title {
+    font-size: x-large;
+    text-align: center;
+    font-family: sans-serif;
+  }
+}
+
+
+
+/* Emoji Animation */
+.hi-emoji {
+  animation-name: wave-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0%, 100% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  15% {
+    transform: rotate(15deg);
   }
+  30% {
+    transform: rotate(-10deg);
+  }
+  45% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Hero Tag */
+.hero-tag {
+  text-align: center;
+  font-weight: 900;
+  font-size: xxx-large;
+  color: rgb(172, 171, 171);
+  background: transparent;
+}
+
+
+
+
+/*Alert ping */
+.ping {
+  background-color: green;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  height: 10px;
+  border-radius: 50%;
+  animation: ping-animation 1.5s infinite ease-out;
+  position:absolute;
+}
+.ping-dot{
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+@keyframes ping-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+/* About.css */
+.custom-box {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(14, 13, 13)
+}
+
+.full-width-box {
+  width: 100%;
+  height: 50vw;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.height-70 {
+  height: 70%;
+}
+
+.height-30 {
+  height: 30%;
+}
+
+
+/*contact*/
+.contact{
+  background-color: rgba(142, 142, 144, 0.205) !important;
 }
